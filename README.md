@@ -8,8 +8,11 @@ The `release-audit` branch is the candidate for the next depot rollout.
 
 ### 📦 Release Blocker Ledger
 
-- [ ] **BLOCKER** `router/allocation.py:2` — remove the temporary lane map
-- [ ] **FOLLOWUP** `router/retired.py:8` — replace the legacy barcode adapter
+- [ ] **BLOCKER** `router/allocation.py:3` — reject routes with an unknown depot code
+- [ ] **FOLLOWUP** `router/allocation.py:6` — emit a metric when the overflow lane is selected
+- [ ] **FOLLOWUP** `router/labels.py:3` — support carrier-specific check digits
+- [ ] **BLOCKER** `router/manifest.py:2` — preserve parcel order during retry serialization
+- [ ] **BLOCKER** `tests/test_allocation.py:2` — cover the depot shutdown fallback
 
 ## Validation
 
